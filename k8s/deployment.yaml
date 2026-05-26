@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tasking-queue-deployment
+  labels:
+    app: tasking-queue
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tasking-queue
+  template:
+    metadata:
+      labels:
+        app: tasking-queue
+    spec:
+      containers:
+      - name: tasking-queue
+        image: satellite-tasking-queue:latest
+        imagePullPolicy: Never # Crucial: Tells K8s to use the local image we just loaded
+        ports:
+        - containerPort: 8000
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "500m"

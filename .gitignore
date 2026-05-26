@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+venv/
+.env
+build/
+*.o
+notes.txt
+.vscode/
+.pytest_cache/
+integration_test.py

@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+venv/
+.env
+build/
+*.o
+notes.txt
+.vscode/
+.pytest_cache/
+.dockerignore
+Dockerfile
+.git
+venv/
+integration_test.py
+.gitignore
+.github
